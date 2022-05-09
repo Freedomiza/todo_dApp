@@ -15,6 +15,7 @@ const moduleExclude = (match) => {
 };
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/web3_dapp/",
   optimizeDeps: {
     include: [
       "gun",
