@@ -4,7 +4,12 @@ import "gun/axe";
 import { writable } from "svelte/store";
 
 // Init DB
-export const db = GUN();
+export const db = GUN({
+  peers: import.meta.env.VITE_GUN_URL.split(","),
+});
+console.log({
+  url: import.meta.env.VITE_GUN_URL.split(","),
+});
 
 export const user = db.user().recall({ sessionStorage: true });
 
